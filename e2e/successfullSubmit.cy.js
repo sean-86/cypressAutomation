@@ -2,7 +2,6 @@ describe('Successful submit', () => {
   it('passes', () => {
 
     cy.visit('https://josephyap9.wixsite.com/qaetestsite')
-    cy.get('[data-testid="buttonElement"]').click()
     cy.get('[id="input_comp-l46hci9f1"]').type('John').should('have.value', 'John')
     cy.get('[id="input_comp-l46hci9k2"]').type('John@gmail.com').should('have.value', 'John@gmail.com')
     cy.get('[id="collection_comp-l46hci9n"]').select('QAE').should('have.value', 'QAE')
